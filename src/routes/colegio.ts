@@ -1,11 +1,11 @@
-import Router from 'express';
-export const router = Router();
+import { Router } from "express";
+import * as methods from "../controllers/colegio";
 
-router.get('/colegios', (_req, res)=>{
-    res.json([{
-        hash: '87123123hjsddasd123'
-    }])
-})
+const router = Router()
 
+router.get('/', methods.getColegios);
+router.get('/:hash', methods.getColegio);
+router.post('/', methods.createColegio);
 
-//  TODO: hacer post de colegios
+export default router
+
