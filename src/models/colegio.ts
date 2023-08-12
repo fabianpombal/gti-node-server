@@ -1,14 +1,8 @@
-import db from "../db/connection";
-import { DataTypes } from 'sequelize';
-
-const Colegio = db.define('Colegio', {
-    nombre: {
-        type: DataTypes.STRING
-    },
-    hash: {
-        type: DataTypes.STRING,
-        primaryKey: true
-    }
-})
-
-export default Colegio;
+export type Colegio = {
+    id:     number;
+    nombre: string;
+    email:  string;
+    fecha_inicio: Date;
+    localidad: string;
+    hash:   string;
+}

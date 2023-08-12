@@ -1,7 +1,11 @@
-import { Sequelize } from "sequelize";
+import mysql from 'mysql2';
 
-const db = new Sequelize('gtidb', 'root', 'password', {
+
+const db = mysql.createConnection({
     host: '127.0.0.1',
-    dialect: 'mysql'
-})
+    user: 'root',
+    password: 'password',
+    database: 'atopa'
+  });
+
 export default db

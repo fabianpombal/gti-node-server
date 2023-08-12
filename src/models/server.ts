@@ -29,7 +29,7 @@ class Server {
     }
     async dbConnection(){
         try{
-            await db.authenticate(); 
+            await db;
         }catch(error){
             throw error;
         }
