@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as methods from "../controllers/colegio";
+import * as methods from "../controllers/colegio.controller";
 
 const router = Router()
 

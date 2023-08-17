@@ -8,7 +8,9 @@ class Server {
     private app = express();
     private port = process.env.PORT;
     private paths = {
-        colegios: '/api/colegios'
+        colegios: '/api/colegios',
+        tipos: '/api/tipos',
+        tests: '/api/tests'
     }
   
 
